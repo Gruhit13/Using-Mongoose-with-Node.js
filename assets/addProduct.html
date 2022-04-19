@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="/style.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="mb-4 text-white">Add Products</h1>
+	
+			<form action="/api/create" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="name" class="text-secondary">Title</label>
+					<input type="text" class="form-control" placeholder="Name" name="name" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="description" class="text-secondary">Description</label>
+					<textarea name="desc" placeholder="Description" class="form-control"></textarea>
+				</div>
+				
+				<div class="form-group">
+					<label for="quantity" class="text-secondary">Quantity</label>
+					<input type="text" class="form-control" placeholder="Quantity" name="quantity" required>
+				</div>
+
+				<div class="form-group">
+					<label for="price" class="text-secondary">Price</label>
+					<input type="text" class="form-control" placeholder="Price" name="price" required>
+				</div>
+
+				<div class="form-group">
+					<label for="image" class="text-secondary">Upload image</label>
+					<input type="file" name="image" id="image" class="form-control-file text-black">
+				</div>
+	
+				<div class="form-group">
+					<a href="/" class="btn btn-warning">Cancel</a>
+					<input type="submit" class="btn btn-primary submitBtn" value="Save">
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
